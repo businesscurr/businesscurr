@@ -1,0 +1,749 @@
+:root {
+    --gold: #C0B283;
+    --gold-light: #DCD0C0;
+    --black: #373737;
+    --gray: #D8D8D8;
+    --white: #F4F4F4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.hero {
+    position:relative;
+    background-image: url('../img/hero-min.jpg');
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero .overlay {
+    position: absolute;
+    background-color: rgba(55, 55, 55, .8);
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+}
+
+.hero .overlay header {
+    width: 90%;
+    height: 10%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero .overlay header .logo-container {
+    width: 60px;
+    overflow: hidden;
+}
+
+.hero .overlay header .logo-container img {
+    width: 100%;
+}
+
+.hero .overlay header nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.hero .overlay header nav ul li a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    margin-right: 20px;
+}
+
+.hero .overlay header nav ul li a:hover {
+    border-bottom: 2px solid var(--gold);
+    color: var(--gold);
+}
+
+.hero .overlay header nav ul li .selected {
+    color: var(--gold);
+    border-bottom: 2px solid var(--gold);
+}
+
+.hero .overlay header nav ul li .cta-chat {
+    border: 2px solid var(--gold);
+    border-radius: 5px;
+    color: var(--gold);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 40px;
+}
+
+.hero .overlay header nav ul li .cta-chat:hover {
+    color: var(--white);
+    background: var(--gold);
+    cursor: pointer;
+}
+
+.hero .overlay .hero-title {
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero .overlay .hero-title h1 {
+    font-size: 6.8rem;
+    font-weight: 600;
+    line-height: 7.4rem;
+    color: var(--gold);
+}
+
+.hero .overlay .hero-title p {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 3.6rem;
+    color: var(--gold-light);
+    margin: 30px 0;
+}
+
+.hero .overlay .hero-title a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.7rem;
+    width: 240px;
+    height: 50px;
+    text-decoration: none;
+    color: var(--black);
+    background-color: var(--gold-light);
+    border-radius: 5px;
+}
+
+.hero .overlay .hero-title a:hover {
+    background: var(--gold);
+}
+
+.hero .overlay .cta-down-container a{
+    border: 2px solid var(--white);
+    border-radius: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.main {
+    width: 100%;
+}
+
+.main .main-benefits {
+    width: 100%;
+    height: auto;
+    background: var(--gold);
+    padding: 30px 40px;
+}
+
+.main .main-benefits h3,
+.main .technologies h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2.7rem;
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--black);
+}
+
+.main .main-benefits .benefits-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main .main-benefits .benefits-container .benefit {
+    text-align: center;
+}
+
+.main .main-benefits .benefits-container .benefit p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+}
+
+.main .portfolio {
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+    background-color: var(--white);
+    display: flex;
+}
+
+.main .portfolio .portfolio-left {
+    width: 50%;
+    height: 100%;
+}
+
+.main .portfolio .portfolio-left .portfolio-title .title-adorno {
+    width: 209px;
+    height: 92px;
+    margin-bottom: -35px;
+}
+
+.main .portfolio .portfolio-left .portfolio-title .title-adorno .adorno-top,
+.main .portfolio .portfolio-left .portfolio-title .title-adorno .adorno-middle,
+.main .portfolio .portfolio-left .portfolio-title .title-adorno .adorno-down {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .portfolio .portfolio-left .portfolio-title .title-adorno .adorno-top .bolita,
+.main .portfolio .portfolio-left .portfolio-title .title-adorno .adorno-middle .bolita,
+.main .portfolio .portfolio-left .portfolio-title .title-adorno .adorno-down .bolita {
+    width: 14px;
+    height: 14px;
+    background-color: var(--gray);
+    border-radius: 100%;
+    margin-bottom: 25px;
+}
+
+.main .portfolio .portfolio-left .portfolio-title .title-adorno .adorno-down .bolita {
+    margin-bottom: 0px;
+}
+
+.main .portfolio .portfolio-left .portfolio-title .title {
+    margin-left: 70px;
+}
+
+.main .portfolio .portfolio-left .portfolio-title .title h2{
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+.main .portfolio .portfolio-left .btn-ver-mas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 50px;
+    background-color: var(--gold-light);
+    border-radius: 5px;
+    color: var(--black);
+    margin: 30px 0 0 70px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.7rem;
+}
+
+.main .portfolio .portfolio-left .btn-ver-mas:hover {
+    background-color: var(--gold);
+}
+
+.main .portfolio .portfolio-left .main-img-portfolio {
+    width: 420px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.main .portfolio .portfolio-left .main-img-portfolio img {
+    width: 100%;
+}
+
+.main .portfolio .portfolio-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+
+.main .portfolio-right .portfolio-projects-left .project,
+.main .portfolio-right .portfolio-projects-right .project {
+    width: 280px;
+    height: 264px;
+    background-color: var(--gray);
+    border-radius: 25px;
+}
+
+.main .portfolio-right .portfolio-projects-left .project {
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+.main .portfolio-right .portfolio-projects-right {
+    margin-top: 100px;
+}
+
+.main .portfolio-right .portfolio-projects-right .project {
+    margin-bottom: 40px;
+}
+
+.main .technologies {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    background: var(--black);
+}
+
+.main .technologies h3 {
+    color: var(--white);
+}
+
+.main .technologies img {
+    width: 60px;
+    height: 60px;
+}
+
+.main .technologies .technologies-container-top,
+.main .technologies .technologies-container-down {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main .technologies .technologies-container-top {
+    margin-bottom: 35px;
+}
+
+.main .resources {
+    width: 100%;
+    height: auto;
+    background: var(--white);
+    padding: 40px 0 40px 0;
+}
+
+.main .resources .resources-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .resources .resources-title h2 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 4rem;
+    color: var(--black);
+    text-align: center;
+}
+
+.main .resources .resources-title .line-title {
+    display: inline-block;
+    border-bottom: 5px solid var(--gold);
+    width: 120px;
+    margin-top: 15px;
+}
+
+.main .resources .resources-container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .resources .resources-container .resource-card {
+    width: 300px;
+    height: 507px;
+    background: var(--gold-light);
+    box-shadow: 0 0px 4px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+}
+
+.main .resources .resources-container .resource-card .resource-card--img {
+    width: 190px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.main .resources .resources-container .resource-card .resource-card--img img {
+    width: 100%;
+}
+
+.main .resources .resources-container .resource-card .resource-card--tag a{
+    margin: 15px 0 15px 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 20px;
+    background-color: var(--gold);
+    text-decoration: none;
+    color: var(--black);
+    border-radius: 100px;
+}
+
+.main .resources .resources-container .resource-card .resource-card-info-container {
+    background-color: #FFF;
+    width: 100%;
+    height: 292px;
+    border-radius: 5px 5px 10px 10px;
+    padding: 20px 10px 25px 10px;
+}
+
+.main .resources .resources-container .resource-card .resource-card-info-container .resource-card-info h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2rem;
+    margin-bottom: 12px;
+}
+
+.main .resources .resources-container .resource-card .resource-card-info-container .resource-card-info p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.6rem;
+}
+
+.main .resources .resources-container .resource-card .btn-dw-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 50px;
+    border: 2px solid var(--gold);
+    border-radius: 5px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin: 0 auto;
+    margin-top: 25px;
+    text-decoration: none;
+}
+
+.main .resources .resources-container .resource-card .btn-dw-container a:hover {
+    background: var(--gold);
+    color: var(--white);
+}
+
+.main .resources .cta-resources-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.main .resources .cta-descubre-mas {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0 auto;
+}
+
+.main .resources .cta-descubre-mas:hover {
+    color: var(--gold);
+}
+
+.main .social-media {
+    width: 100%;
+    height: auto;
+    background-color: var(--black);
+    padding: 40px 20px;
+    display: flex;
+}
+
+.main .social-media a {
+    text-decoration: none;
+}
+
+.main .social-media .social-media-left,
+.main .social-media .social-media-right {
+    width: 50%;
+}
+
+.main .social-media .social-media-left .social-media-title p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    margin-bottom: 10px;
+    color: var(--gold);
+}
+
+.main .social-media .social-media-left .social-media-title h2 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 4rem;
+    color: var(--white);
+    margin-bottom: 18px;
+}
+
+.main .social-media .social-media-left .social-media-cards {
+    display: flex;
+}
+
+.main .social-media .social-media-left .social-media-cards .social-media-cards-left .card-social-media,
+.main .social-media .social-media-left .social-media-cards .social-media-cards-right .card-social-media {
+    width: 308px;
+    height: 100px;
+    border: 3px solid var(--gold-light);
+    border-radius: 5px;
+    background: var(--gold);
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main .social-media .social-media-left .social-media-cards .social-media-cards-right .card-social-media {
+    margin-left: 20px;
+}
+
+.main .social-media .social-media-left .social-media-cards .social-media-cards-left .card-social-media .card-rrss-title h4,
+.main .social-media .social-media-left .social-media-cards .social-media-cards-right .card-social-media .card-rrss-title h4{
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.main .social-media .social-media-left .social-media-cards .social-media-cards-left .card-social-media .card-rrss-title p,
+.main .social-media .social-media-left .social-media-cards .social-media-cards-right .card-social-media .card-rrss-title p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: var(--black);
+}
+
+.main .social-media .social-media-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.main .social-media .social-media-right .rrss-right-img-container {
+    width: 500px;
+    height: 400px;
+}
+
+
+.main .social-media .social-media-right .rrss-right-img-container img {
+    width: 100%;
+}
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: #3F3F3F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: var(--white);
+}
+
+.footer p span {
+    font-weight: 600;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1249px) {
+
+    .hero .overlay .hero-title {
+        text-align: center;
+    }
+
+    .hero .overlay .hero-title a {
+        margin: 0 auto;
+    }
+    
+    .main .portfolio .portfolio-left .portfolio-title .title h2{
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 4rem;
+    }
+
+    .main .main-benefits .benefits-container {
+        justify-content: space-between;
+    }
+
+    .main .portfolio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main .portfolio .portfolio-left {
+        width: 90%;
+        display: flex;
+    }
+
+    .main .portfolio .portfolio-left .main-img-portfolio {
+        width: 300px;
+        height: 280px;
+        
+    }
+
+    .main .portfolio .portfolio-right {
+        width: 100%;
+        justify-content: center;
+    } 
+
+    .main .technologies .technologies-container-top,
+    .main .technologies .technologies-container-down {
+        justify-content: space-around;
+    }
+
+    .main .resources .resources-container {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .main .resources .resources-container .resource-card {
+        margin-bottom: 30px;
+    }
+
+    .main .resources .resources-container .resource-card:last-child {
+        margin-bottom: 0;
+    }
+
+    .main .social-media {
+        flex-wrap: wrap;
+    }
+
+    .main .social-media .social-media-left,
+    .main .social-media .social-media-right {
+        width: 100%;
+    }
+
+    .main .social-media .social-media-left .social-media-cards {
+        justify-content: center;
+        margin: 40px 0;
+    }
+}
+
+@media (max-width: 833px) {
+
+    .hero .overlay header nav {
+        display: none;
+    }
+
+    .hero .overlay .hero-title h1 {
+        font-size: 3.8rem;
+        line-height: 5rem;
+    }
+    
+    .hero .overlay .hero-title p {
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 3.4rem;
+    }
+
+    .main .main-benefits h3 {
+        font-size: 2.4rem;
+        line-height: 3rem;
+    }
+
+    .main .main-benefits .benefits-container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .main .main-benefits .benefits-container .benefit {
+        width: 50%;
+        margin-bottom: 25px;
+    }
+
+    .main .main-benefits .benefits-container .benefit:last-child {
+        margin-bottom: 0;
+    }
+
+    .main .portfolio .portfolio-left .portfolio-title .title-adorno{
+       display: none;
+    }
+
+    .main .portfolio .portfolio-left .portfolio-title .title {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .main .portfolio .portfolio-left .btn-ver-mas {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .main .portfolio .portfolio-left {
+        flex-direction: column;
+    }
+
+    .main .portfolio .portfolio-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main .portfolio .portfolio-right .project {
+        margin: 30px 0;
+    }
+
+    .main .portfolio .portfolio-right .portfolio-projects-right {
+        margin-top: -30px;
+    }
+
+    .main .technologies .technologies-container-top,
+    .main .technologies .technologies-container-down {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .main .technologies .technologies-container-top {
+        margin-bottom: 0;
+    }
+
+    .main .technologies .technologies-container-top img,
+    .main .technologies .technologies-container-down img {
+        width: 30%;
+        margin-bottom: 25px;
+    } 
+
+    .main .technologies .technologies-container-down img:last-child {
+        margin-bottom: 0;
+    }
+
+    .main .social-media {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .main .social-media .social-media-left .social-media-title {
+        text-align: center;
+    }
+    .main .social-media .social-media-left .social-media-title h2 {
+        font-size: 3.2rem;
+    }
+
+    .main .social-media .social-media-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main .social-media .social-media-left .social-media-cards .social-media-cards-right .card-social-media {
+        margin-left: 0;
+    }
+
+    .main .social-media .social-media-right .rrss-right-img-container {
+        width: 380px;
+        min-width: 320px;
+        height: 280px;
+    }
+}
